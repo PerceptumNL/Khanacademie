@@ -1,0 +1,3 @@
+[submodule "khan-exercises"]
+        path = khan-exercises
+        url = git://github.com/PerceptumNL/khan-exercises.git
