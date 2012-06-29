@@ -18,8 +18,8 @@
 
 {% block pagecontent %}
 <article id="login-page">
-    <h2 class="pulls">{% if direct %}Login{% else %}You need to login to access this part of the site.{% endif %}</h2>
-    <h3>Already have an account with one of these sites? Click the logo to use your account to login here:</h3>
+    <h2 class="pulls">{% if direct %}Login{% else %}Je moet inloggen om dit gedeelte van de site te gebruiken.{% endif %}</h2>
+    <h3>Heb je al een account bij &eacute;&eacute;n van deze sites? Klik op het logo om jouw account te gebruiken om hier in te loggen:</h3>
     <form class="openid" method="post" action="/login?continue={{continue|urlencode}}">
       <div><ul class="providers">
       <li class="direct action-gradient" title="Google">
@@ -37,17 +37,17 @@
 	  </li>
       </ul></div>
       <fieldset id="username_fields">
-      <label for="openid_username">Enter your <span>Provider user name</span></label>
+      <label for="openid_username">Voer je <span>Provider gebruikersnaam</span> in</label>
       <div><span></span><input type="text" name="openid_username" /><span></span>
       <input type="submit" value="Login" /></div>
       </fieldset>
       <fieldset id="domainname_fields">
-      <label for="openid_domainname">Enter your <span>Provider domain name</span></label>
+      <label for="openid_domainname">Voer je <span>Provider domeinnaam</span> in</label>
       <div><span></span><input type="text" name="openid_domainname" /><span></span>
       <input type="submit" value="Login" /></div>
       </fieldset>
       <fieldset  id="identifier_fields">
-      <label for="openid_identifier">Enter your <a class="openid_logo" href="http://openid.net">OpenID</a></label>
+      <label for="openid_identifier">Voer je <a class="openid_logo" href="http://openid.net">OpenID</a> in</label>
       <div><input type="text" name="openid_identifier" />
       <input type="submit" value="Login" /></div>
       </fieldset>
@@ -56,20 +56,21 @@
 
     <div id="real_fb_button" style="display: none;"><fb:login-button></fb:login-button></div>
 
-    <h5 style="margin:18px 0 0 0;">Don't have an account yet?</h5>
+    <h5 style="margin:18px 0 0 0;">Heb je nog geen account?</h5>
     <div>
         <ul class="providers-sign-up">
-            <li><a href="https://www.google.com/accounts/NewAccount">Sign up for a Google account</a></li>
-            <li><a href="http://www.facebook.com/r.php">Sign up for a Facebook account</a></li>
+            <li><a href="https://www.google.com/accounts/NewAccount">Meld je aan voor een Google account</a></li>
+            <li><a href="http://www.facebook.com/r.php">Meld je aan voor een Facebook account</a></li>
+            <li><a href="http://www.hyves.nl/create/">Meld je aan voor een Hyves account</a></li>
         </ul>
     </div>
     <div class="clear">&nbsp;</div><br/><br/>
-    <h2 class="pulls">Why should you sign up?</h2>
-    <h3>When you login, we save all of your progress. Also, <a href="/about">students and coaches get access to some cool tools</a>:</h3>
+    <h2 class="pulls">Waarom moet je je aanmelden?</h2>
+    <h3>Wanneer je inlogt, slaan wij je voortgang op. <a href="/nl-content/about.html">Leerlingen en coaches krijgen toegang tot handige hulpmiddelen</a>:</h3>
     <div id="feature-list">
-        <div class="feature"><a href="/about"><img src="/images/exercise-dashboard-medium.png" height="250" width="320" /></a><br />Students: <strong>navigate your knowledge map</strong> as you work through exercises.</div>
-    <div class="feature"><a href="/about"><img src="/images/student-profile-medium.png" height="250" width="320" /></a><br />Students: <strong>track your video and exercise progress</strong> in your profile.</div>
-    <div class="feature"><a href="/about"><img src="/images/class-report-medium.png" height="250" width="320" /></a><br />Coaches: <strong>Track all of your students</strong> with the class report.</div>
+        <div class="feature"><a href="/nl-content/about.html"><img src="/images/exercise-dashboard-medium.png" height="250" width="320" /></a><br />Leerlingen: <strong>navigeer je kenniskaart</strong>  terwijl je aan oefeningen werkt.</div>
+    <div class="feature"><a href="/nl-content/about.html"><img src="/images/student-profile-medium.png" height="250" width="320" /></a><br />Leerlingen: <strong>volg je video en oefeningen voortgang </strong> in je profiel.</div>
+    <div class="feature"><a href="/nl-content/about.html"><img src="/images/class-report-medium.png" height="250" width="320" /></a><br />Coaches: <strong>Volg al je leerlingen</strong> in het overzicht van je klas.</div>
         <div class="clear">&nbsp;</div>
     </div>
 </article>

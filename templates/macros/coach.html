@@ -1,32 +1,32 @@
 {% macro empty_class_instructions(class_is_empty=True) -%}
 
-    {% set coach_email = UserData.current().email if UserData.current() else "Not signed in. Please sign in to see your Coach ID." %}
+    {% set coach_email = UserData.current().email if UserData.current() else "Niet ingelogd. Log in om je Coach ID te zien." %}
 
     <div id="empty-class">
         {% if class_is_empty %}
-        <h1>You don't have any students yet.</h1>
+        <h1>Je hebt nog geen leerlingen.</h1>
         {% endif %}
-        <h3>Each of your students needs to sign in and follow these steps:</h3>
+        <h3>Elk van jouw leerlingen moet inloggen en de volgende stappen volgen:</h3>
         <ol>
             <li>
-                <p>First, they should click on the <a href="/coaches">Add a Coach</a> link at the bottom of the page.</p>
+                <p>Eerst klikken ze op de link <a href="/coaches">Add a Coach</a> onderaan de pagina.</p>
                 <a href="/coaches"><img src="/images/add-a-coach.png" class="vertical-shadow rounded-background" /></a>
             </li>
             <li class="enter-email">
-                <p>Then, they should enter your Coach ID in the form that looks like this:</p>
+                <p>Vervolgens voeren ze jouw Coach ID in het tekstveld in:</p>
                 <div class="coach-email">{{ coach_email|escape }}</div>
                 <a href="/coaches"><img src="/images/enter-coach-email.png?{{App.version}}" class="vertical-shadow rounded-background"/></a>
                 <p>
-                    Your Coach ID is <strong>{{ coach_email|escape }}</strong>.
+                    Jouw Coach ID is <strong>{{ coach_email|escape }}</strong>.
                 </p>
             </li>
             <li class="click-register">
-                <p>Finally, they need to click the <em>Register Coach</em> button. It looks like this:</p>
+                <p>Tenslotte klikken ze op de <em>Register Coach</em> knop. Die ziet er zo uit:</p>
                 <div class="coach-email">{{ coach_email|escape }}</div>
                 <a href="/coaches"><img src="/images/click-register.png?{{App.version}}" class="vertical-shadow rounded-background"/></a>
             </li>
         </ol>
-        <p>Once students make you their coach, you'll have access to all types of interesting data about their progress and achievements.</p>
-        <p>You can access that data via the <a href="/class_profile">Class Report</a>.</p>
+        <p>Zodra leerlingen jou tot coach hebben gemaakt, heb je toegang tot allerlei interessante informatie over hun voortgang en prestaties.</p>
+        <p>Je kunt de informatie raadplegen via het <a href="/class_profile">Class Report</a>.</p>
     </div>
 {%- endmacro %}
